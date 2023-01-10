@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <nav>
       <ul>
-        <li><Link to="/Comments">Comments</Link></li>
+        <li hidden={localStorage.getItem('token')?true:false}><Link to="/Comments">Comments</Link></li>
         <li><Link to="/users">Users</Link></li>
         <li><button onClick={()=>{
           localStorage.removeItem('token')
